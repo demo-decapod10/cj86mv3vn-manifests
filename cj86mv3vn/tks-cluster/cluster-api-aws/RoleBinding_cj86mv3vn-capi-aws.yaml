@@ -1,0 +1,13 @@
+# Source: cluster-api-aws/templates/rbac.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: cj86mv3vn-capi-aws
+  namespace: cj86mv3vn
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: cj86mv3vn-capi-aws
+subjects:
+- kind: ServiceAccount
+  name: cj86mv3vn-capi-aws
